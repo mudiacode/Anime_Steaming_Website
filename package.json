@@ -1,0 +1,27 @@
+{
+  "name": "anime_streaming_website",
+  "version": "1.0.0",
+  "description": "## This is an anime streaming website using an anime-based API",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MudiaUON/Anime_Steaming_Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MudiaUON/Anime_Steaming_Website/issues"
+  },
+  "homepage": "https://github.com/MudiaUON/Anime_Steaming_Website#readme",
+  "dependencies": {
+    "sass": "^1.58.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
