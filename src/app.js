@@ -1,6 +1,7 @@
 // Hamburger Menu
 const hamburger_menu = document.querySelector("#hamburger");
 const hamburger_btn = document.querySelector("#hamburger-btn");
+// const hamburger_menu_width = document.querySelector(".hamburger-mobile")
 
 // Search Toggle
 const search_menu = document.querySelector("#search-menu");
