@@ -12,7 +12,7 @@
       <!-- Navbar -->
 
       <!-- Hamburger Menu JS -->
-      <div class="hamburger-mobile-container">
+      <div id="hamburger" class="hamburger-mobile-container menu-toggle">
         <div class="nav-links hamburger-mobile">
           <ul>
             <li><a class="current-page" href="">Home</a></li>
@@ -23,9 +23,9 @@
       </div>
       <nav>
         <!-------------------->
-        
+
         <div>
-          <i class="fa fa-bars fa-lg text-white menu"></i>
+          <i id="hamburger-btn" class="fa fa-bars fa-lg text-white menu"></i>
           <div class="nav-links">
             <ul>
               <li><a class="current-page" href="">Home</a></li>
@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="searchbar">
-          <i class="fa fa-magnifying-glass fa-lg"></i>
+          <i  class="fa fa-magnifying-glass fa-lg"></i>
           <input
             class="search"
             type="text"
@@ -45,15 +45,14 @@
           />
         </div>
         <div class="nav-right">
-          <i class="fa fa-magnifying-glass fa-lg search-mobile"></i>
+          <i id="search-btn" class="fa fa-magnifying-glass fa-lg search-mobile"></i>
           <div class="pfp"></div>
         </div>
       </nav>
-      
 
       <!-- JS Search Menu -->
       <div class="searchbar-mobile-container">
-        <div class="searchbar searchbar-mobile">
+        <div id="search-menu" class="searchbar searchbar-mobile search-toggle">
           <i class="fa fa-magnifying-glass fa-lg mobile-search-icon"></i>
           <input
             class="search"
@@ -66,7 +65,6 @@
       </div>
 
       <!-- JS Hamburger Menu -->
-
     </section>
 
     <script src="../src/app.js"></script>
