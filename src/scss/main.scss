@@ -1,10 +1,214 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
 * {
     box-sizing: border-box;
     margin: 0;
-    border: 0;
-    background-color: #252B37;
+    padding: 0;
+    background-color: transparent;
+    color: white;
+    font-family: 'Anek Bangla', sans-serif;
+
+    .fa {
+        color: white;
+        cursor: pointer;
+    }
+}
+
+body {
+
+}
+
+.hero {
+ background-image: url("../images/yorha-2b-x-dark-knight-crossover-nier-automata-x-final-fantasy-xiv-online-video-game-wallpaper-3440x1440_15.jpg");
+ background-size: cover;
+ background-position: center;
+ height: 100vh;
+}
+
+
+
+// Navbar
+@mixin navSpace {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin center {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin rounded {
+    border-radius: 0.5rem;
+}
+
+@mixin padding{
+    padding: 0.5rem;
+}
+
+@mixin mobile{
+    @media (max-width: 595px) {
+        display: none;
+    }
+}
+
+@mixin desktop{
+    @media (min-width: 595px) {
+        display: none;
+    }
 }
 
 nav {
-    padding: 1rem;
+    @include navSpace;
+    padding: 1rem 7rem;
+
+    @media (max-width: 825px) {
+        padding: 2rem;
+    }
+
+    .nav-right {
+        @include navSpace;
+        gap: 1rem;
+
+        .search-mobile{
+            @include desktop;
+            color: white;
+            background-color: transparent;
+            
+        }
+    }
+
+    .menu {
+        @include desktop;
+    }
+
+    .pfp {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 1rem;
+        background-image: url("/images/cc50cada4658669e26f818405cc7016b.jpg");
+        background-size: cover;
+        cursor: pointer;
+    }
+
+    .nav-links{
+        @include mobile;
+
+        ul{
+            display: flex;
+            flex-direction: row;
+            gap: 3rem;
+
+            li {
+                list-style: none;
+                @include navSpace;
+            }
+        }
+
+        a{
+            text-decoration: none;
+            
+        }
+        
+        .current-page{
+            font-size: 1.1rem;
+        }
+
+        .sub-page {
+            opacity: 80%;
+        }
+
+    }
+
+    .searchbar {
+        @include navSpace;
+        margin: 1rem;
+        position: relative;
+        background-color: white;
+        @include rounded;
+        height: 2rem;
+        @include mobile;
+
+        .search {
+            background-color: white;
+            border: 0;
+            color: black;
+            @include padding;
+            font-size: 0.75rem;
+            @include rounded;
+            height: 2rem;
+            outline: none;
+        }
+    }
+
+    .fa-magnifying-glass{
+        color: #252B37;
+        @include padding;
+        background-color: white;
+
+        @media (min-width: 595px) {
+            opacity: 0.7;
+        }
+    }
+
+
 }
+
+.searchbar-mobile-container {
+    padding: 2rem;
+    @media (max-width: 375px) {
+        padding: 2rem 0rem;
+        
+    }
+
+    .searchbar-mobile {
+        border: white 1.5px solid;
+        @include padding;
+        @include rounded;
+        @include desktop;
+        opacity: 0.8;
+        display: none;
+    
+        .mobile-search-icon{
+            @include padding;
+            @media (max-width: 375px) {
+                font-size: 0.8rem;
+                
+            }
+        }
+    
+        input{
+            outline: none;
+            @media (max-width: 375px) {
+                font-size: 0.5rem;
+                
+            }
+        }
+    }
+}
+
+.hamburger-mobile {
+    display: none;
+
+    li{
+        list-style: none;
+
+        a{
+            text-decoration: none;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

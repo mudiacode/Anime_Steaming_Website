@@ -8,12 +8,62 @@
     <title>Document</title>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav>
-      <div>
-        <i class="fa-solid fa-bars"></i>
+    <section class="hero">
+      <!-- Navbar -->
+      <nav>
+        <div>
+          <i class="fa fa-bars fa-lg text-white menu"></i>
+          <div class="nav-links">
+            <ul>
+              <li><a class="current-page" href="">Home</a></li>
+              <li><a class="sub-page" href="">Movies</a></li>
+              <li><a class="sub-page" href="">Series</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="searchbar">
+          <i class="fa fa-magnifying-glass fa-lg"></i>
+          <input
+            class="search"
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search"
+          />
+        </div>
+        <div class="nav-right">
+          <i class="fa fa-magnifying-glass fa-lg search-mobile"></i>
+          <div class="pfp"></div>
+        </div>
+      </nav>
+
+      <!-- JS Search Menu -->
+      <div class="searchbar-mobile-container">
+        <div class="searchbar searchbar-mobile">
+          <i class="fa fa-magnifying-glass fa-lg mobile-search-icon"></i>
+          <input
+            class="search"
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search"
+          />
+        </div>
       </div>
-    </nav>
+
+      <!-- JS Hamburger Menu -->
+      <div>
+        <div class="nav-links hamburger-mobile">
+          <ul>
+            <li><a class="current-page" href="">Home</a></li>
+            <li><a class="sub-page" href="">Movies</a></li>
+            <li><a class="sub-page" href="">Series</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <script src="../src/app.js"></script>
     <script
       src="https://kit.fontawesome.com/1105d2a9f9.js"
       crossorigin="anonymous"
