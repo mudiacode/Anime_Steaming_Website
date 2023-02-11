@@ -17,6 +17,18 @@
 }
 
 // Hero Section
+@mixin mobile{
+    @media (max-width: 595px) {
+        display: none;
+    }
+}
+
+@mixin desktop{
+    @media (min-width: 595px) {
+        display: none;
+    }
+}
+
 @mixin heroPadding {
     padding: 1rem 7rem;
 }
@@ -39,12 +51,27 @@
     .hero-content {
         height: 50vh;
         @include heroPadding;
+        @media (max-width: 595px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-direction: column;
+            padding: 0;
+            text-align: center;
+        }
+        
 
 
         .hero-sub-content{
             display: flex;
             align-items: center;
+            
             gap: 1rem;
+            
+            @media (max-width: 595px) {
+                display: none;
+            }
 
             h3 {
                 @include subFontWeight;
@@ -64,24 +91,31 @@
         button {
             border: 0;
             padding: 0.2rem 4rem;
-            background-color: purple;
+            background-color: #D1392B;
             border-radius: 2rem;
             margin: 1rem 0rem;
             @include subFontWeight;
             font-size: 1.2rem;
             text-transform: uppercase;
+            cursor: pointer;
             transition: all 0.2s ease-in-out;
+            @media (max-width: 595px) {
+                bottom: 0;
+            }
 
         }
 
         .button-glow:hover{
             color: rgba(255, 255, 255, 1);
-            box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+            box-shadow: 0 5px 15px rgba(233, 69, 43, 0.4);
         }
 
         h1{
             font-size: 4rem;
             @include uppercase;
+            @media (max-width: 595px) {
+                font-size: 3rem;
+            }
         }
     }
 }
