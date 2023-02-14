@@ -114,6 +114,7 @@
         h1{
             font-size: 4rem;
             @include uppercase;
+            line-height: 90%;
             @media (max-width: 595px) {
                 font-size: 3rem;
             }
