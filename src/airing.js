@@ -22,9 +22,9 @@ fetch("https://gogoanime2.p.rapidapi.com/popular", options)
       "release"
     )[0].innerHTML = `${response[2].releasedDate}`;
 
-    const button = document.getElementsByClassName("button")[0];
+    const button = document.getElementsByClassName("button");
     button.addEventListener("click", () => {
-      window.open(`${response[2].animeUrl}`, "_blank");
+      window.location.href = `${response[2].animeUrl}`;
     });
   })
   .catch((err) => console.error(err));

@@ -24,14 +24,13 @@ fetch("https://gogoanime2.p.rapidapi.com/popular", options)
     // iterate over the collection of elements
     for (let i = 0; i < cards.length; i++) {
       const card = cards[i];
-      const popular = () => {
-        card.style.backgroundImage = `url(${response[i].animeImg})`;
-        card.style.backgroundSize = "cover";
-      };
+      const animeUrl = response[i].animeUrl;
 
+      card.style.backgroundImage = `url(${response[i].animeImg})`;
+      card.style.backgroundSize = "cover";
 
-
-      popular();
+      card.addEventListener("click", () => {
+        window.open(animeUrl, "_blank");
+      });
     }
-  })
-  .catch((err) => console.error(err));
+  });
