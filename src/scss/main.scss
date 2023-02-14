@@ -154,9 +154,10 @@
 
 
 .card {
+    padding: 0;
     cursor: pointer;
     background-color: white;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     display: inline-block;
     margin: 4.5rem 2rem 1rem 0rem;
     height: 300px; /* play around with this number until you get the height you need */
@@ -166,6 +167,22 @@
         height: 200px; /* play around with this number until you get the height you need */
         width: 10rem;
         max-width: 100%;
+    }
+
+    .card-info {
+        text-overflow: ellipsis;
+        padding: 0rem 1rem;
+        border-radius: 0.5rem;
+        z-index: 99;
+        height: 2rem;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        text-align: center;
+        color: #252B37;
     }
 }
 

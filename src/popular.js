@@ -16,11 +16,6 @@ fetch("https://gogoanime2.p.rapidapi.com/popular", options)
     // select all elements with class name "card"
     const cards = document.getElementsByClassName("card");
 
-    const heroBg = document.getElementsByClassName("hero");
-    // const popularNumDiv = document.createElement("div");
-
-    // popularNumDiv.classList.add("popularNum");
-
     // iterate over the collection of elements
     for (let i = 0; i < cards.length; i++) {
       const card = cards[i];
@@ -28,6 +23,14 @@ fetch("https://gogoanime2.p.rapidapi.com/popular", options)
 
       card.style.backgroundImage = `url(${response[i].animeImg})`;
       card.style.backgroundSize = "cover";
+
+            // Create a new div element to hold the anime title
+            const titleDiv = document.createElement("div");
+            titleDiv.classList.add("card-info");
+            titleDiv.innerHTML = response[i].animeTitle;
+      
+            // Append the title div to the card div
+            card.appendChild(titleDiv);
 
       card.addEventListener("click", () => {
         window.open(animeUrl, "_blank");
