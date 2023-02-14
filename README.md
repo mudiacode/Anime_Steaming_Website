@@ -1,4 +1,6 @@
 # Anime Streaming Website
 
-This is an anime streaming website using an anime-based API
+This is my anime streaming website using GoGoAnime Api via RapidAPI!
+
+
 
