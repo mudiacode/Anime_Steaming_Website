@@ -6,11 +6,25 @@ const options = {
   },
 };
 
-fetch("https://gogoanime2.p.rapidapi.com/?page=1", options)
+fetch("https://gogoanime2.p.rapidapi.com/popular", options)
   .then((response) => response.json())
   .then((response) => {
     console.log(response);
 
-    
+    const heroBg = document.getElementsByClassName("hero")[0];
+    heroBg.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${response[2].animeImg})`;
+
+    document.getElementsByClassName(
+      "heroh1"
+    )[0].innerHTML = `${response[2].animeTitle}`;
+
+    document.getElementsByClassName(
+      "release"
+    )[0].innerHTML = `${response[2].releasedDate}`;
+
+    const button = document.getElementsByClassName("button")[0];
+    button.addEventListener("click", () => {
+      window.open(`${response[2].animeUrl}`, "_blank");
+    });
   })
   .catch((err) => console.error(err));
