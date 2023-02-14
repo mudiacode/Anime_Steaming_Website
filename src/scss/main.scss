@@ -314,6 +314,7 @@ nav {
         @include padding;
         @include rounded;
         @include desktop;
+        position: sticky;
         opacity: 0.8;
     
         .mobile-search-icon{
